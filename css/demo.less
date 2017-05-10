@@ -1,0 +1,16 @@
+@demoBG:#f00;
+@Color:#fff;
+
+
+.demo02{
+	width: @W*4;
+	height: @H;
+	background: @demoBG;
+	color: @Color;
+}
+
+/*
+前面已經下@W與@H的變數 可以不用更改 
+但這裡若下變數 因為擺在最後 會連帶更動到前面的樣式
+ 而不是只改動這裡的
+*/

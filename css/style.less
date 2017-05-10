@@ -1,0 +1,107 @@
+@textColor: #909;
+@backgroundColor:#9C0;
+
+
+.rounded{
+  -webkit-border-radius:50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px ;
+    border-radius: 50px;
+}
+
+h2{
+	color:@textColor;
+	border:1px solid @textColor;
+}
+.box{
+	color:@textColor;
+}
+
+.sideboxA{
+    width:100px;
+    height:100px;
+	background-color:@backgroundColor;
+	.rounded;
+}
+
+
+/*Mixins*/
+
+.rounded10(@radius:10px){
+  -webkit-border-radius:@radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius ;
+    border-radius: @radius;
+}
+
+.sideboxB{
+	width:100px;
+    height:100px;
+	background-color:@backgroundColor;
+	.rounded10;
+}
+.sideboxC{
+	width:100px;
+    height:100px;
+	background-color:@backgroundColor;
+	.rounded10(50px);
+}
+
+/*Operations-Math*/
+ @W:100px;
+ @H:100px;
+ @base-margin:15px;
+ .boxA{
+ 	width: @W;
+ 	height: @H;
+ 	background: @backgroundColor;
+ 	margin-top: (@base-margin + 100px);
+ }
+ @base:5%;
+
+ @link-color:#C06;
+ a{
+ 	color:@link-color;
+ }
+ a:hover{
+ 	color:lighten(@link-color, 50%);
+ }
+
+ /*
+  lighten(@color, 50%); 明亮
+  darken(@color, 50%);  變暗
+  saturate(@color, 50%); 飽和
+  desaturate(@color, 50%); 未飽和
+
+  fadein(@color, 50%); 淡入
+  spin(@color, 50); 轉動
+ */
+
+ //這是單行註解
+
+ @import "demo.css"; //另外引入
+ @import "demo.less"; //less也是可以引入的
+
+ /*Nesting 巢狀結構*/
+ @fw:100%;
+ @BGColor:#000; 
+ #header{
+ 	width: @fw;
+ 	height: @H*5;
+ 	color:#cfcfcf;
+ 	nav{
+ 	  font-size: 20px;
+ 	}
+ 	.logo{
+ 	      width: @W*3;	
+          background: @BGColor;
+          color: @link-color;
+     &:hover{
+         text-decoraction:none;
+         color:#ff0;
+     }
+ 	}
+
+ }

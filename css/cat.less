@@ -1,0 +1,100 @@
+/*position*/
+@W90:90vw;
+@W50:50vw;
+@em:.1em;
+
+@blk:block;
+@N:none;
+
+/*color*/
+@green:#063;
+@white:#FFF;
+@LightGray:#CCC;
+@deepG:#030;
+
+/*layout*/
+@btnColor:#063;
+/*真是完全沒必要的實作...*/
+
+h1,h2,h3,h4,h5,h6{
+    padding: @em*2;
+}
+button {
+    background-color: @green;
+    color: @white;
+    border: @N;
+    margin: @em*5;
+    padding: @em*5;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px @deepG;
+}
+
+button:hover {
+    background-color: @deepG;
+}
+
+img {
+    width: @W50;
+    cursor: pointer;
+}
+
+input {
+    display: @blk;
+    margin: @em*5 0;
+    width: 100%;    
+}
+
+.content {
+    display: flex;
+}
+
+#cat-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+#catbox {
+    position: relative;
+    padding: @em*2;
+}
+
+.adminBox {
+    width: calc(50% - 1.5em);
+    position: relative;
+    display: inline;
+}
+
+#admin {
+    display: @blk;
+}
+
+#edit {
+    display: @N;
+    margin: @em*2;
+
+}
+
+.h{
+    cursor:pointer;
+    color:inherit;
+    text-decoration: @N;
+}
+
+
+@media screen and (max-width: 450px ) {
+    img{
+        width: @W90;
+    }
+    .content {
+        display: block;
+    }
+    input{
+        width: @W90;
+    } 
+    footer{
+        text-align: center;
+        line-height: @em*15;
+    }  
+}

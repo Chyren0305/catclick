@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Use less</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1><a href="index.html" class="h">Cat</a> Clicker</h1>
+    <div id="cat-list"></div>
+            <h2 id='cat-name'></h2>
+            <h3 id='cat-title'></h3>
+            <p> 
+               You click  <span id="cat-counter"></span> <span id="cat-times">&nsp;time</span>  
+                        <button id="cat-reset">Reset</button> 
+                        <button id="adminBtn">admin</button>
+            </p>    
+    <div class="content">
+
+        <div id="catbox">
+
+            <img id="cat-img" src="" alt="cute cat" />
+            
+        </div>
+        <div class="adminBox">
+            
+            <div id="edit">
+                <label for="name">Name</label>
+                    <input type="text" id ='admin-name'  value="">
+
+                <label for="title">Title</label>
+                    <input type="text" id ='admin-title' value="">
+
+<!--                 <label for="img">圖片</label>
+                    <input type="text" id ='admin-img' value=""> -->
+                <label for="counter">times</label>
+ 
+                    <input type="text" id ='admin-counter' value="">
+
+                <label for="">
+                    <button type="submit" value="Save" id='admin-submit'>Submit</button>
+                    <button type="reset" value="Cancel" id='admin-cancel'>Reset</button>
+                </label>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <a href="less_t1.html">use less</a> &copy;chyren for UdacifyHomework
+    </footer>
+
+</body>
+<link rel="stylesheet/less" type="text/css" href="css/cat.less">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+<script type="text/javascript" src="js/main.js" async defer></script>
+
+
+</html>
